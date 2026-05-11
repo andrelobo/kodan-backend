@@ -1,6 +1,6 @@
-# NORA BACKEND
+# KODAN BACKEND
 
-Backend principal do Nora AI Coding Assistant.
+Backend principal do Kodan AI Coding Assistant.
 
 Responsável por:
 - orchestration do agent
@@ -15,7 +15,7 @@ Responsável por:
 
 # OBJETIVO
 
-Transformar Nora em um AI Engineering Assistant local-first.
+Transformar Kodan em um AI Engineering Assistant local-first.
 
 O backend é o cérebro operacional do sistema.
 
@@ -277,6 +277,6 @@ Limitações:
 
 # FILOSOFIA
 
-Nora Backend NÃO é apenas uma API.
+Kodan Backend NÃO é apenas uma API.
 
 É um runtime agentic de engenharia assistida por IA.

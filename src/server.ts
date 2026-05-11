@@ -12,7 +12,7 @@ app.use(express.json())
 app.get('/', (_, res) => {
   res.json({
     status: 'ok',
-    service: 'nora-backend'
+    service: 'kodan-backend'
   })
 })
 
@@ -22,6 +22,6 @@ const PORT = 3000
 
 app.listen(PORT, () => {
   console.log(
-    `🚀 Codex local rodando em http://localhost:${PORT}`
+    `🚀 Kodan local rodando em http://localhost:${PORT}`
   )
 })

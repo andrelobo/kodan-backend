@@ -41,7 +41,8 @@ router.post('/', async (req, res) => {
     console.log(`⏱ ${total}s`)
 
     return res.json({
-      output
+      output,
+      model
     })
 
   } catch (err: any) {
