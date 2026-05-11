@@ -7,7 +7,7 @@ Responsável por:
 - integração com modelos
 - tool execution
 - filesystem access
-- streaming
+- resposta HTTP ao frontend
 - agent loop
 - workspace sandbox
 
@@ -39,6 +39,34 @@ Funções principais:
 
 ---
 
+# ESTADO REAL ATUAL
+
+## API
+
+- `GET /` retorna healthcheck do serviço
+- `POST /generate` recebe `{ prompt }`
+- a resposta atual de `/generate` retorna:
+  - `output`
+  - `model`
+
+## Integração com o frontend
+
+- o frontend esperado está em `../frontend/kodan`
+- o consumo local ocorre via `http://localhost:3000/generate`
+- CORS está liberado para desenvolvimento local
+
+## Streaming
+
+O backend ainda não faz token streaming HTTP para o cliente final.
+
+Hoje o fluxo é:
+- receber prompt
+- escolher modelo
+- rodar o agent loop
+- devolver resposta final em JSON
+
+---
+
 # ARQUITETURA
 
 src/
@@ -62,6 +90,10 @@ Responsável por:
 - executar tools
 - retornar resultados
 - controlar steps
+
+Observação:
+- o loop interno pode ser multi-step
+- a resposta para o frontend continua sendo final e síncrona
 
 ---
 
@@ -261,6 +293,7 @@ Limitações:
 - diff engine
 - patch system
 - approval flow
+- streaming HTTP real para o cliente
 
 ---
 
